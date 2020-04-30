@@ -1,12 +1,12 @@
 const proxy = require('http-proxy-middleware');
 
-// module.exports = function(app) {
-//     app.use(proxy('/auth/google', { target: 'http://localhost:5000'}));
-// }
-
 module.exports = function(app) {
-    app.use(proxy("/*/**", { // https://github.com/chimurai/http-proxy-middleware
-    target: "http://localhost:5000",
-    secure: false
-    }));
-};
+    app.use(proxy('/auth/google', { target: 'http://localhost:5000'}));
+}
+
+// module.exports = function(app) {
+//     app.use(proxy("/*/**", { // https://github.com/chimurai/http-proxy-middleware
+//     target: "http://localhost:5000",
+//     secure: false
+//     }));
+// };
